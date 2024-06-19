@@ -10,11 +10,16 @@ public class FoodController : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, destroyAfter);
+        // Destroy(gameObject, destroyAfter);
     }
 
     void Update()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + speed);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag != "Food") Destroy(gameObject);
     }
 }

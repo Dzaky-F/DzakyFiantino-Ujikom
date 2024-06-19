@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 0.5f;
+    public float speed = 0.15f;
     public Transform foodPrefab;
 
     private Animator playerAnimator;
